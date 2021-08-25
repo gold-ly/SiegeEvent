@@ -20,6 +20,11 @@ public class EventCommand implements CommandExecutor {
         }
         Player player = (Player) commandSender;
 
+        if(!player.hasPermission("event.admin")) {
+            player.sendMessage("§cYou don't have permissions to run this command!");
+            return false;
+        }
+
         if(strings.length == 0) {
             player.sendMessage("§7 - §f/event start §7| Starts the event");
             player.sendMessage("§7 - §f/event stop §7| Stops the event");
