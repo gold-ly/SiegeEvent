@@ -10,8 +10,6 @@ import java.util.stream.IntStream;
 
 public class BlockSaver {
     private static ArrayList<Block> placedBlocks = new ArrayList<>();
-    private static ArrayList<Block> brokenBlocks = new ArrayList<>();
-    private static ArrayList<Material> brokenBlockMaterials = new ArrayList<>();
     private static HashMap<Block, Material> brokenBlocksMap = new HashMap<>();
 
     public static void restoreBlocks() {
@@ -24,7 +22,7 @@ public class BlockSaver {
         }
 
         placedBlocks.clear();
-        brokenBlocks.clear();
+        brokenBlocksMap.clear();
     }
 
     public static void addPlacedBlock(Block block) {
@@ -32,9 +30,6 @@ public class BlockSaver {
     }
 
     public static void addBrokenBlock(Block block) {
-        brokenBlocks.add(block);
-        brokenBlockMaterials.add(block.getType());
-
         brokenBlocksMap.put(block, block.getType());
     }
 
