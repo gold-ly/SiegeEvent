@@ -2,3 +2,7 @@ name: SiegeEvent
 version: 0.0.1
 api-version: 1.16
 main: de.lowkeys.siegeevent.main.SiegeEvent
+commands:
+  event:
+    name: Event
+    description: Settings for the Siege Event
