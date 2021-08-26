@@ -10,6 +10,7 @@ public class QuitListener implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent event) {
         if(SiegeEvent.isEventRunning()) {
+            // When a player leaves while the event is running, his inventory is recovered
             InventorySaver.restoreSpecificInventory(event.getPlayer().getUniqueId());
         }
     }

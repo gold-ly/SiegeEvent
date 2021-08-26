@@ -10,7 +10,7 @@ import java.util.stream.IntStream;
 
 public class BlockSaver {
     private static ArrayList<Block> placedBlocks = new ArrayList<>();
-    private static HashMap<Block, Material> brokenBlocksMap = new HashMap<>();
+    private static HashMap<Block, Material> brokenBlocksMap = new HashMap<>(); // Hash table for storing the block and the original material of it
 
     public static void restoreBlocks() {
 
